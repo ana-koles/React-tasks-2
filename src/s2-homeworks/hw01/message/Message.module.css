@@ -1,28 +1,52 @@
 .message {
+  max-width: 575px;
 
 }
 
 .imageAndText {
-
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .imageAndText img {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 
 }
 
 .text {
-
-}
-
-.text:after {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: #0066CC;
+  padding: 7px 13px 8px 13px;
 
 }
 
 .name {
-
+  color: white;
+  font-family:'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  margin-bottom: 3px;
 }
 
 .messageText {
+  color: white;
+  font-family:'Montserrat', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
 
 }
 
