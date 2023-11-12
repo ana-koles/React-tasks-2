@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/React-tasks-2/static/css/main.2915a979.css",
-    "main.js": "/React-tasks-2/static/js/main.1e256541.js",
+    "main.css": "/React-tasks-2/static/css/main.dd7f9b5d.css",
+    "main.js": "/React-tasks-2/static/js/main.4e9be298.js",
     "static/js/787.66cb4309.chunk.js": "/React-tasks-2/static/js/787.66cb4309.chunk.js",
+    "static/media/guy-ritchie.jpg": "/React-tasks-2/static/media/guy-ritchie.38a9feb3c6ae76905479.jpg",
     "static/media/avatar.png": "/React-tasks-2/static/media/avatar.d947cb9d0d13765666b6.png",
     "index.html": "/React-tasks-2/index.html",
-    "main.2915a979.css.map": "/React-tasks-2/static/css/main.2915a979.css.map",
-    "main.1e256541.js.map": "/React-tasks-2/static/js/main.1e256541.js.map",
+    "main.dd7f9b5d.css.map": "/React-tasks-2/static/css/main.dd7f9b5d.css.map",
+    "main.4e9be298.js.map": "/React-tasks-2/static/js/main.4e9be298.js.map",
     "787.66cb4309.chunk.js.map": "/React-tasks-2/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2915a979.css",
-    "static/js/main.1e256541.js"
+    "static/css/main.dd7f9b5d.css",
+    "static/js/main.4e9be298.js"
   ]
 }
