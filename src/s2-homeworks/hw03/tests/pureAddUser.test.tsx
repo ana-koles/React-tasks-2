@@ -27,6 +27,7 @@ test('name 1', () => {
     expect(error).toBe('')
     expect(added).toBe(true)
 })
+
 test('name 2', () => {
     name = ''
     pureAddUser(name, setError, setName, addUserCallback)
