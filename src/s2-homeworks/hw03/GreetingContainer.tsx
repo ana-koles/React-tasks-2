@@ -11,7 +11,6 @@ type GreetingContainerPropsType = {
 export const pureAddUser = (name: any, setError: any, setName: any,
     addUserCallback: any) => {
 
-    debugger;
     let newName = name.trim();
 
     if (!newName) {
