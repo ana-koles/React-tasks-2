@@ -1,18 +1,21 @@
 {
   "files": {
-    "main.css": "/React-tasks-2/static/css/main.daecd3a8.css",
-    "main.js": "/React-tasks-2/static/js/main.4936366f.js",
+    "main.css": "/React-tasks-2/static/css/main.4d849bfa.css",
+    "main.js": "/React-tasks-2/static/js/main.d2d6e006.js",
     "static/js/787.66cb4309.chunk.js": "/React-tasks-2/static/js/787.66cb4309.chunk.js",
     "static/media/guy-ritchie.jpg": "/React-tasks-2/static/media/guy-ritchie.38a9feb3c6ae76905479.jpg",
     "static/media/avatar.png": "/React-tasks-2/static/media/avatar.d947cb9d0d13765666b6.png",
+    "static/media/404.svg": "/React-tasks-2/static/media/404.9ec31c0ba8d95b0480272e46af98c955.svg",
+    "static/media/closeOutline.svg": "/React-tasks-2/static/media/closeOutline.b64ba402fac8a549bc2de97e9cf84a61.svg",
     "index.html": "/React-tasks-2/index.html",
     "static/media/checked.svg": "/React-tasks-2/static/media/checked.b75ca55e8759862b4083.svg",
-    "main.daecd3a8.css.map": "/React-tasks-2/static/css/main.daecd3a8.css.map",
-    "main.4936366f.js.map": "/React-tasks-2/static/js/main.4936366f.js.map",
+    "static/media/burger.svg": "/React-tasks-2/static/media/burger.700e416f7bfe3697f96b36c778d25355.svg",
+    "main.4d849bfa.css.map": "/React-tasks-2/static/css/main.4d849bfa.css.map",
+    "main.d2d6e006.js.map": "/React-tasks-2/static/js/main.d2d6e006.js.map",
     "787.66cb4309.chunk.js.map": "/React-tasks-2/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.daecd3a8.css",
-    "static/js/main.4936366f.js"
+    "static/css/main.4d849bfa.css",
+    "static/js/main.d2d6e006.js"
   ]
 }
