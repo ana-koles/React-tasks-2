@@ -17,7 +17,7 @@
     justify-content: center;
     border-top: 1px solid rgb(217, 217, 217);
     border-bottom: 1px solid rgb(217, 217, 217);
-    padding: 35px 0 50px;
+    padding: 35px 00px 50px 20px;
 
 }
 
@@ -29,4 +29,5 @@
     line-height: normal;
     margin-bottom: 15px;
     margin-top: 15px;
+    padding-left: 20px;
 }
