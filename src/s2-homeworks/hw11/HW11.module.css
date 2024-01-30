@@ -2,7 +2,17 @@
 }
 
 .wrapper {
+  margin-bottom: 56px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
 }
 
 .number {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
 }
+
+
