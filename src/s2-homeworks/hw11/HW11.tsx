@@ -37,7 +37,8 @@ function HW11() {
                         <SuperRange
 
                             id={'hw11-single-slider'}
-                            defaultValue={value1}
+                            //defaultValue={value1}
+                            value={value1}
                             min={0}
                             max={100}
                             step={1}
