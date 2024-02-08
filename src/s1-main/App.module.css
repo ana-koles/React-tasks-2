@@ -1,6 +1,6 @@
 .App {
     --header_height: 60px;
-    background-color: #F5F7FB;
+  /*   background-color: #F5F7FB; */
     position: relative;
     z-index: 0;
     display: flex;

@@ -19,5 +19,21 @@ html {
 }
 
 .select {
+    height: 36px;
+    width: 170px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 2px;
+    border-color: #323232;
+}
 
+h4 {
+    font-size: 14px;
+    margin-bottom: 6px;
+    font-weight: 400;
 }
