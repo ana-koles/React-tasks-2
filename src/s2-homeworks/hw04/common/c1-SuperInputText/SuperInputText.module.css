@@ -1,4 +1,5 @@
 .input:focus {
+  border: 1px solid #0066CC;
 }
 
 .input {
@@ -23,8 +24,8 @@
   flex-direction: column-reverse;
 }
 
-.superInput {
-
+.superInput:focus {
+  border: 1px solid #0066CC;
 }
 
 .errorInput {
