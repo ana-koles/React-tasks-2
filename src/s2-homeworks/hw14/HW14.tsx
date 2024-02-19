@@ -32,18 +32,22 @@ const HW14 = () => {
 
     const sendQuery = (value: string) => {
         setLoading(true)
+
         getTechs(value)
-            .then((res) => {
+        .then((res) => {
+            if (res && res.data && res.data.techs) {
+                setTechs(res.data.techs);
+                setLoading(false)
+            }
                 // делает студент
-
                 // сохранить пришедшие данные
-
-                //
             })
     }
 
     const onChangeText = (value: string) => {
-        setFind(value)
+        setFind(value);
+        setSearchParams({find: value})
+
         // делает студент
 
         // добавить/заменить значение в квери урла
