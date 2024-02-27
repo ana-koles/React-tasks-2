@@ -22,7 +22,7 @@ type TechType = {
 }
 
 type ParamsType = {
-    sort: string
+    sort?: string
     page: number
     count: number
 }
@@ -41,21 +41,27 @@ const getTechs = (params: ParamsType) => {
 const HW15 = () => {
     const [sort, setSort] = useState('')
     const [page, setPage] = useState(1)
-    const [count, setCount] = useState(4)
+    const [count, setCount] = useState(4) //how many items should be displyed on the page
     const [idLoading, setLoading] = useState(false)
     const [totalCount, setTotalCount] = useState(100)
     const [searchParams, setSearchParams] = useSearchParams()
     const [techs, setTechs] = useState<TechType[]>([])
 
-    const sendQuery = (params: any) => {
+    const sendQuery = (params: ParamsType) => {
         setLoading(true)
         getTechs(params)
             .then((res) => {
                 // делает студент
-
-                // сохранить пришедшие данные
+                if (res) {
+                    setTechs(res.data.techs);
+                    setTotalCount(res.data.totalCount);
+                }
+                    // сохранить пришедшие данные
 
                 //
+            })
+            .finally(() => {
+                setLoading(false);
             })
     }
 
@@ -63,10 +69,14 @@ const HW15 = () => {
         // делает студент
 
         // setPage(
+            setPage(newPage);
+            setCount(newCount);
         // setCount(
 
         // sendQuery(
+            sendQuery({page: page, count: count})
         // setSearchParams(
+            setSearchParams({'page': `${page}`, 'count': `${count}`})
 
         //
     }
@@ -85,9 +95,11 @@ const HW15 = () => {
 
     useEffect(() => {
         const params = Object.fromEntries(searchParams)
-        sendQuery({page: params.page, count: params.count})
         setPage(+params.page || 1)
         setCount(+params.count || 4)
+        sendQuery({page: +params.page, count: +params.count})
+        setSearchParams({'page': `${page}`, 'count': `${count}`})
+
     }, [])
 
     const mappedTechs = techs.map(t => (

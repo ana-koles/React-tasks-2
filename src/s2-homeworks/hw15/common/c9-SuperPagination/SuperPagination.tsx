@@ -19,6 +19,8 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
     const lastPage = 10 // пишет студент // вычислить количество страниц
 
     const onChangeCallback = (event: any, page: number) => {
+        debugger;
+        onChange(page, )
         // пишет студент
     }
 
