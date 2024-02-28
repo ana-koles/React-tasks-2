@@ -4,6 +4,7 @@
 
 .developer {
 
+
 }
 
 .techHeader {
@@ -11,17 +12,49 @@
 }
 
 .developerHeader {
+    padding-left: 17px;
 
 }
 
 .row {
     display: flex;
+    align-items: center;
+    font-size: 16px;
+    gap: 12px;
+    border-bottom: 1px solid #E5E5E5;
+    padding: 12px 12px 12px 17px;
 }
 
 .rowHeader {
     display: flex;
+    background-color: #E5E5E5;
+    max-width: 606px;
+    height: 36px;
+    font-size: 14px;
+    font-weight: 600;
+    padding-left: 17px;
+    align-items: center;
 }
 
 .loading {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    left: 0;
+    right: 0;
+    max-height: 1140px;
+    top: 0;
+    bottom: 0;
+    display: flex; /* Используем flex-контейнер для центрирования содержимого */
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+    align-items: center; /* Центрируем содержимое по вертикали */
+    z-index: 10;
+
+}
+
+.loading  img {
+    width: 108px;
+    height: 108px;
+    display: inline-block;
+    margin: auto auto;
 
 }

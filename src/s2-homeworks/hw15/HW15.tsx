@@ -4,7 +4,8 @@ import s from './HW15.module.css'
 import axios from 'axios'
 import SuperPagination from './common/c9-SuperPagination/SuperPagination'
 import {useSearchParams} from 'react-router-dom'
-import SuperSort from './common/c10-SuperSort/SuperSort'
+import SuperSort from './common/c10-SuperSort/SuperSort';
+import loadingImg from './spinning-dots.svg'
 
 /*
 * 1 - дописать SuperPagination
@@ -74,15 +75,20 @@ const HW15 = () => {
         // setCount(
 
         // sendQuery(
-            sendQuery({page: page, count: count})
+            sendQuery({page: newPage, count: newCount})
         // setSearchParams(
-            setSearchParams({'page': `${page}`, 'count': `${count}`})
+            setSearchParams([['page', `${newPage}`], ['count', `${newCount}`]])
 
         //
     }
 
     const onChangeSort = (newSort: string) => {
+
         // делает студент
+        setSort(newSort);
+        setPage(1)
+        sendQuery({page, count, sort: newSort});
+        setSearchParams([['page', `${page}`], ['count', `${count}`], ['sort', sort]])
 
         // setSort(
         // setPage(1) // при сортировке сбрасывать на 1 страницу
@@ -94,11 +100,12 @@ const HW15 = () => {
     }
 
     useEffect(() => {
+
         const params = Object.fromEntries(searchParams)
         setPage(+params.page || 1)
         setCount(+params.count || 4)
-        sendQuery({page: +params.page, count: +params.count})
-        setSearchParams({'page': `${page}`, 'count': `${count}`})
+        sendQuery({page, count})
+        //sendQuery({page: +params.page, count: +params.count})
 
     }, [])
 
@@ -119,7 +126,7 @@ const HW15 = () => {
             <div className={s2.hwTitle}>Homework #15</div>
 
             <div className={s2.hw}>
-                {idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...</div>}
+                {idLoading && <div id={'hw15-loading'} className={s.loading}><img src={loadingImg} alt={'Loading...'}/></div>}
 
                 <SuperPagination
                     page={page}
