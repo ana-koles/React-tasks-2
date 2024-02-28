@@ -7,15 +7,6 @@ import {useSearchParams} from 'react-router-dom'
 import SuperSort from './common/c10-SuperSort/SuperSort';
 import loadingImg from './spinning-dots.svg'
 
-/*
-* 1 - дописать SuperPagination
-* 2 - дописать SuperSort
-* 3 - проверить pureChange тестами
-* 3 - дописать sendQuery, onChangePagination, onChangeSort в HW15
-* 4 - сделать стили в соответствии с дизайном
-* 5 - добавить HW15 в HW5/pages/JuniorPlus
-* */
-
 type TechType = {
     id: number
     tech: string
@@ -42,7 +33,7 @@ const getTechs = (params: ParamsType) => {
 const HW15 = () => {
     const [sort, setSort] = useState('')
     const [page, setPage] = useState(1)
-    const [count, setCount] = useState(4) //how many items should be displyed on the page
+    const [count, setCount] = useState(4)
     const [idLoading, setLoading] = useState(false)
     const [totalCount, setTotalCount] = useState(100)
     const [searchParams, setSearchParams] = useSearchParams()
@@ -52,14 +43,10 @@ const HW15 = () => {
         setLoading(true)
         getTechs(params)
             .then((res) => {
-                // делает студент
                 if (res) {
                     setTechs(res.data.techs);
                     setTotalCount(res.data.totalCount);
                 }
-                    // сохранить пришедшие данные
-
-                //
             })
             .finally(() => {
                 setLoading(false);
@@ -67,36 +54,20 @@ const HW15 = () => {
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
-        // делает студент
-
-        // setPage(
             setPage(newPage);
             setCount(newCount);
-        // setCount(
 
-        // sendQuery(
             sendQuery({page: newPage, count: newCount})
-        // setSearchParams(
             setSearchParams([['page', `${newPage}`], ['count', `${newCount}`]])
 
-        //
     }
 
     const onChangeSort = (newSort: string) => {
-
-        // делает студент
         setSort(newSort);
         setPage(1)
         sendQuery({page, count, sort: newSort});
         setSearchParams([['page', `${page}`], ['count', `${count}`], ['sort', sort]])
 
-        // setSort(
-        // setPage(1) // при сортировке сбрасывать на 1 страницу
-
-        // sendQuery(
-        // setSearchParams(
-
-        //
     }
 
     useEffect(() => {
@@ -105,7 +76,7 @@ const HW15 = () => {
         setPage(+params.page || 1)
         setCount(+params.count || 4)
         sendQuery({page, count})
-        //sendQuery({page: +params.page, count: +params.count})
+
 
     }, [])
 

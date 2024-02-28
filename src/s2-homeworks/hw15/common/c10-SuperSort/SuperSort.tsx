@@ -3,7 +3,7 @@ import down from './down.png'
 import up from './up.png'
 import none from './noneIcon.png'
 
-// добавить в проект иконки и импортировать
+
 const downIcon = down;
 const upIcon = up;
 const noneIcon = none;
@@ -16,13 +16,12 @@ export type SuperSortPropsType = {
 }
 
 export const pureChange = (sort: string, down: string, up: string) => {
-    // пишет студент, sort: (click) => down (click) => up (click) => '' (click) => down ...
     if (sort === down) {
         return up;
     } else if (sort === up) {
         return ''
     } else
-    return down // исправить
+    return down
 }
 
 const SuperSort: React.FC<SuperSortPropsType> = (
